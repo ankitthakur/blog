@@ -15,7 +15,7 @@ style:
     padding: 33%
     anchor: "#46f"
     serif-heading: true
-    nav: "#181818"
+    nav: "#e67e22"
 #    headline: "#06f"
     description: "white"
     article:
