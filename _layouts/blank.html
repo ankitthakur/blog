@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      {% unless site.style.headline %}<h1><a href="{{ site.baseurl }}/">{{ site.description }} <img src="SHSwiftKit.png" align=middle width=100px height=150px></a></h1>{% endunless %}
+      {% unless site.style.headline %}<h1><a href="{{ site.baseurl }}/">{{ site.description }} <img src="SHSwiftKit.png" align=middle width=30% height=30%></a></h1>{% endunless %}
       <nav>
         <ul>
           <li><a href="{{ site.baseurl }}/">Home</a></li>{% for node in site.pages %}{% if node.title %}<li><a href="{{ node.url | prepend: site.baseurl }}"{% if page.url == node.url %} id="selected"{% endif %}>{{ node.title }}</a></li>{% endif %}{% endfor %}
