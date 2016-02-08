@@ -25,7 +25,8 @@ style:
 links:
   - github: "https://github.com/ankitthakur/"
   - twitter: "https://twitter.com/ankitthakur/"
-  
+  - linkedin: "https://in.linkedin.com/in/ankitthakur"
+
 paginate: 10
 excerpt_separator: "\n\n\n" # excerpt ends after two blank lines
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
