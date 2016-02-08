@@ -1,7 +1,7 @@
 ---
 title:  "Introduction"
 date:   2016-02-07 15:30:00
-categories: about me
+categories: AboutMe
 ---
 
 **Introduction**
