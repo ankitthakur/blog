@@ -5,17 +5,18 @@ categories: swift scope
 ---
 
 **Basic**
+
 Variables are defined globally and locally within some particular scope.
 
-*Global variables* are defined outside the scope of *function*, *closure* or *class*.
-*Local variables* are defined inside the scope of *function*, *closure* or *class*.
+**Global variables** are defined outside the scope of *function*, *closure* or *class*.
+**Local variables** are defined inside the scope of *function*, *closure* or *class*.
 
 In C and Javascript, we were defining the local scope of the variables in curly braces {% highlight c %}{}{% endhighlight %}
 And in Objective-C and Swift, we were defining the local scope of variables during heavy computations in local *autoreleasepools* like:
 {% highlight c %}
-    autoreleasepool { () -> () in
-        // local scope
-    }
+  autoreleasepool { () -> () in
+      // local scope
+  }
 {% endhighlight %}
 
 So in swift, we can create local scope of the variables with and without *autoreleasepools* like this:
