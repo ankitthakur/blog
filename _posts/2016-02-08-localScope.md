@@ -4,11 +4,10 @@ date:   2016-02-08 12:00:00 +0530
 categories: swift scope
 ---
 
-**Basic**
-
 Variables are defined globally and locally within some particular scope.
 
 **Global variables** are defined outside the scope of *function*, *closure* or *class*.
+
 **Local variables** are defined inside the scope of *function*, *closure* or *class*.
 
 In C and Javascript, we were defining the local scope of the variables in curly braces {% highlight c %}{}{% endhighlight %}
