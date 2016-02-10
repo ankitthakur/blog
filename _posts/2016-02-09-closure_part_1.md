@@ -18,6 +18,15 @@ We can think about variables storing values, *ivars* like int hold int value, st
 
 {% endhighlight %}
 
+Improved version of above snippet is
+
+{% highlight c %}
+  let simpleClosure1:String->Void = {
+     println("Hello Friends, I am a simple closure 1")
+   }
+
+{% endhighlight %}
+
 Another example of simple closure, is when it takes 1 input and no output
 
 {% highlight c %}
@@ -26,6 +35,15 @@ Another example of simple closure, is when it takes 1 input and no output
      println("Hello Friends, I am a \(closureName)")
    }
 
+simpleClosure2("simple Closure 2");
+{% endhighlight %}
+
+Improved version of above snippet is
+
+{% highlight c %}
+  let simpleClosure2:String->Void = {
+     println("Hello Friends, I am a \($0)")
+   }
 simpleClosure2("simple Closure 2");
 {% endhighlight %}
 
@@ -69,10 +87,32 @@ func callClosureNTimes(num: Int, handler:(String)->Void) {
 
 {% endhighlight %}
 
+Above syntax use C style of for loop, the more swifty version and better readability of loop and closure is:
+
+Improvements:
+{% highlight c %}
+for var i=0; i < num; i++
+//swifty loop
+for var i=0..<num
+
+
+handler:(String)->Void
+// better readability
+handler:String->Void
+{% endhighlight %}
+
+Revised version:
+{% highlight c %}
+func callClosureNTimes(num: Int, handler:String->Void) {
+    for var i=0..<num{
+      handler("calling closure \(i) times")
+    }
+}
+{% endhighlight %}
 
 calling this function, and passing simpleClosure2, simpleClosure2 of type *(String)->Void*
 {% highlight c %}
-callClosureNTimes(5, simpleClosure2);
+callClosureNTimes(5, handler:simpleClosure2);
 {% endhighlight %}
 
 **Using closure with Swift array**
@@ -80,7 +120,7 @@ Now we will use array object and will apply map algorithm on it to iterate over 
 
 Lets take an array of String called friends:
 {% highlight c %}
-var friends = ["Jimmy", "Kim", "Catrina", "Stephen"]
+let friends = ["Jimmy", "Kim", "Catrina", "Stephen"]
 {% endhighlight %}
 
 Now add a closure, that will great each of the friend in party.
@@ -113,9 +153,20 @@ let friendClosure = {
  }
 {% endhighlight %}
 
+The improved version to use the above snippet is:
+{% highlight c %}
+let friendClosure = {
+   (friendName:String) -> Void in
+   print("Welcome \($0)")
+ }
+{% endhighlight %}
+
 Calling this closure as:
 {% highlight c %}
 friends.map(friendClosure)
 {% endhighlight %}
 
 In next part, we will discuss about closure's changing functionality, closure selections and memory management in closures.
+
+Reviewed by:
+Dan Appel : dan.appel00@gmail.com
