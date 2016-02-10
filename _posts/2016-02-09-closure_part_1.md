@@ -1,6 +1,6 @@
 ---
 title:  "Closure - Part 1"
-date:   2016-02-09 10:45:00 +0530
+date:   2016-02-09 10:35:00 +0530
 categories: swift closure
 ---
 
