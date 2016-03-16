@@ -130,6 +130,11 @@ Now in each of the submodule's header file, `SubModule1.h` and `SubModule2.h`, w
 
 {% endhighlight %}
 
+> The target setup of these module header files are at `Project` level, while added to `NewModule` target.
+
+![alt text](http://ankitthakur.github.io/blog/images/submodule_headers_target_setup.png)
+
+
 Now we will create main framework's modulemap, where we will add `export *` so that all the header files or swift files targetted to this framework will be public to the project.
 
 > Swift classes are currently not supported in ModuleMap.
@@ -154,3 +159,34 @@ FOUNDATION_EXPORT const unsigned char NewModuleVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <NewModule/PublicHeader.h>
 {% endhighlight %}
+
+
+** Example Usage of SubModules **
+
+Now I am creating a swift class in SubModule1, and will access `SWifiNetwork.h` class using `SubModule2` module as in below syntax.
+
+{% highlight c %}
+import Foundation
+
+import ifaddrs
+import SubModule1
+import SubModule2
+import CommonCrypto
+
+public class Wifi: NSObject {
+
+	let addr = WifiNetwork().localIPAddress();
+	let saddr = SWifiNetwork().localIPAddress();
+	public let cc:CC_MD5_CTX?
+
+	override public init() {
+		self.cc = CC_MD5_CTX()
+	}
+
+}
+
+{% endhighlight %}
+
+In above code, we can see, I can access SubModule1 and SubModule2 easily in project.
+
+> As these module's header files were added at project level, so these are private to framework level, and cannot be accessed beyond framework level.
