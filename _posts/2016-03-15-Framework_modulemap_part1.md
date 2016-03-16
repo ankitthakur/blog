@@ -76,13 +76,13 @@ Now taking above into reference, I have created 2 private modules
 * SubModule2
 in the `NewModule` folder as below:
 
-![alt text](http://ankitthakur.github.io/blog/images/submodules_in_mainmodule)
+![alt text](http://ankitthakur.github.io/blog/images/submodules_in_mainmodule.png)
 
 Then created 2 `modulemap` files with each having one `header file` in each folder as below:
-![alt text](http://ankitthakur.github.io/blog/images/submodules_modulemaps_header)
+![alt text](http://ankitthakur.github.io/blog/images/submodules_modulemaps_header.png)
 
 Now I have created Objective-C classes in each module `WifiNetwork` and `SWifiNetwork`:
-![alt text](http://ankitthakur.github.io/blog/images/objectiveC_files_each_module)
+![alt text](http://ankitthakur.github.io/blog/images/objectiveC_files_each_module.png)
 
 Both classes have similar function/method.
 ```
