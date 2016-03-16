@@ -92,15 +92,17 @@ in the `NewModule` folder as below:
 ![alt text](http://ankitthakur.github.io/blog/images/submodules_in_mainmodule.png)
 
 Then created 2 `modulemap` files with each having one `header file` in each folder as below:
+
 ![alt text](http://ankitthakur.github.io/blog/images/submodules_modulemaps_header.png)
 
 Now I have created Objective-C classes in each module `WifiNetwork` and `SWifiNetwork`:
 ![alt text](http://ankitthakur.github.io/blog/images/objectiveC_files_each_module.png)
 
 Both classes have similar function/method.
-```
+
+{% highlight c %}
 - (NSString *)localIPAddress;
-```
+{% endhighlight %}
 
 Now in each of the submodule's header file, `SubModule1.h` and `SubModule2.h`, we will import the header files, which are exposed at these private modules as
 
