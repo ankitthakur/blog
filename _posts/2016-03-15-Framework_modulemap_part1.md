@@ -13,15 +13,15 @@ To achieve this, I have firstly created a `NewModule` framework with swift targe
 Remember, the groups in xcode project and folders in system finder should be aligned. To achieve this, a command-line tool [`synx`](https://github.com/venmo/synx) is available, that helps to reorganizes your Xcode project folder to match your Xcode groups.
 
 Here is the basic structure of the framework project as below:
-![alt text](http://ankitthakur.github.io/blog/images/basic_framework_structure.png")
+![alt text](http://ankitthakur.github.io/blog/images/basic_framework_structure.png)
 
 **C Libraries based ModuleMap**
 To integrate C libraries `ifaddrs` and `CommonCrypto`, I had created 2 folders at $SRCROOT path of the project as
 below:
-![alt text](http://ankitthakur.github.io/blog/images/C_libraries_folders.png")
+![alt text](http://ankitthakur.github.io/blog/images/C_libraries_folders.png)
 
 Now in each of the folder, we create `module.map` file.
-![alt text](http://ankitthakur.github.io/blog/images/C_libraries_modulemaps.png")
+![alt text](http://ankitthakur.github.io/blog/images/C_libraries_modulemaps.png)
 
 In CommonCrypto folder's `module.map` file, write below code:
 
